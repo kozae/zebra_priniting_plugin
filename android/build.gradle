@@ -14,7 +14,7 @@ buildscript {
     }
 }
 
-allprojects {
+rootProject.allprojects {
     repositories {
         google()
         mavenCentral()
@@ -48,6 +48,13 @@ android {
     }
 
     dependencies {
+        // Use local JAR file for Zebra SDK
+        // Download from: https://www.zebra.com/us/en/support-downloads/software/developer-tools/link-os-sdk.html
+        // Place in android/libs/ZSDK_ANDROID_API.jar
+        implementation(files("libs/ZSDK_ANDROID_API.jar"))
+        
+        // Coroutines for async operations
+        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
         testImplementation("org.jetbrains.kotlin:kotlin-test")
         testImplementation("org.mockito:mockito-core:5.0.0")
     }

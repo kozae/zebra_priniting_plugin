@@ -2,6 +2,14 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        // Zebra's official Maven repository
+        maven {
+            url = uri("https://zebratech.jfrog.io/artifactory/ZSDK")
+        }
+        // JitPack as alternative
+        maven { 
+            url = uri("https://jitpack.io") 
+        }
     }
 }
 
