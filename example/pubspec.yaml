@@ -31,6 +31,9 @@ dependencies:
   
   # Permission handler for Bluetooth permissions
   permission_handler: ^11.0.0
+  
+  # QR code scanner for connecting to printers
+  mobile_scanner: ^6.0.2
 
 dev_dependencies:
   integration_test:
